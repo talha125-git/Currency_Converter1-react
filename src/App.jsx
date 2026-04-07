@@ -26,24 +26,28 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat relative"
+      className="w-full h-screen flex flex-col bg-cover bg-no-repeat relative"
       style={{
         backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
       }}
     >
-      {/* Watermark */}
-      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        <span className="text-white text-6xl font-bold opacity-10 rotate-[-30deg] select-none">
-          Abuta
+      {/* Fixed Top Navbar */}
+      <div className="fixed top-0 left-0 w-full  bg-white shadow-lg z-50 px-6 py-3 flex items-center justify-between">
+        <h1 className=" text-xl font-bold tracking-wide">Currency Converter</h1>
+        <span className="text-white text-sm font-semibold bg-blue-500 px-3 py-1 rounded-full">
+          Abutalha
         </span>
       </div>
 
-      {/* Main Page Header */}
-      <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-6 tracking-widest uppercase">
-        💱 Abuta's Currency Converter
-      </h1>
+      {/* Watermark */}
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+        <span className="text-white text-6xl font-bold opacity-10 rotate-[-30deg] select-none">
+          Abutalha
+        </span>
+      </div>
 
-      <div className="w-full">
+      {/* Main Content */}
+      <div className="flex-1 flex justify-center items-center mt-16">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
             onSubmit={(e) => {
