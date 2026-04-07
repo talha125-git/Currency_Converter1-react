@@ -26,11 +26,23 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+      className="w-full h-screen flex flex-col justify-center items-center bg-cover bg-no-repeat relative"
       style={{
         backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
       }}
     >
+      {/* Watermark */}
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+        <span className="text-white text-6xl font-bold opacity-10 rotate-[-30deg] select-none">
+          Abuta
+        </span>
+      </div>
+
+      {/* Main Page Header */}
+      <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-6 tracking-widest uppercase">
+        💱 Abuta's Currency Converter
+      </h1>
+
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
